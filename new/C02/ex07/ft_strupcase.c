@@ -1,48 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: manufria <manufria@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 16:48:40 by manufria          #+#    #+#             */
-/*   Updated: 2024/11/12 16:48:43 by manufria         ###   ########.fr       */
+/*   Created: 2024/11/12 16:45:38 by manufria          #+#    #+#             */
+/*   Updated: 2024/11/12 16:45:44 by manufria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include <stdio.h>
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+char *ft_strupcase(char *str)
 {
-	int	endofstr;
 	int	i;
-
-	endofstr = 0;
+	
 	i = 0;
-	while (i <= n && src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		if (src[i] == '\0' || endofstr == 1)
+		i++;
+	}
+
+	char dest[i];
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] <= 'z' && str[i] >= 'a')
 		{
-			dest[i] = '\0';
-			endofstr = 1;
+			dest[i] = str[i] - 32;
 		}
 		else
 		{
-			dest[i] = src[i];
+			dest[i] = str[i];
 		}
 		i++;
+
 	}
 	return (dest);
 }
 
-// int	main(void)
-// {
-// 	char	str1[10];
-// 	char	str2[10];
-
-// 	printf("%s\n", ft_strncpy(str1, "Hello", 10));
-// 	ft_strncpy(str2, "World", 10);
-// 	printf("%s\n", str1);
-// 	printf("%s\n", str2);
-// 	return (0);
-// }
+int	main(void)
+{
+	printf("%s\n", ft_strupcase("hello"));
+	printf("%s\n", ft_strupcase("He!!loworld"));
+	printf("%s\n", ft_strupcase("HOLA""AAA"));
+	printf("%s\n", ft_strupcase("Hello World !"));
+	printf("%s\n", ft_strupcase(""));
+	return (0);
+}

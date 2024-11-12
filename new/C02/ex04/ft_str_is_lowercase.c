@@ -1,48 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: manufria <manufria@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 16:48:40 by manufria          #+#    #+#             */
-/*   Updated: 2024/11/12 16:48:43 by manufria         ###   ########.fr       */
+/*   Created: 2024/11/12 16:45:38 by manufria          #+#    #+#             */
+/*   Updated: 2024/11/12 16:45:44 by manufria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+int	ft_str_is_lowercase(char *str)
 {
-	int	endofstr;
 	int	i;
 
-	endofstr = 0;
 	i = 0;
-	while (i <= n && src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		if (src[i] == '\0' || endofstr == 1)
+		if (str[i] <= 'z' && str[i] >= 'a')
 		{
-			dest[i] = '\0';
-			endofstr = 1;
+			i++;
 		}
 		else
 		{
-			dest[i] = src[i];
+			return (0);
 		}
-		i++;
 	}
-	return (dest);
+	return (1);
 }
 
 // int	main(void)
 // {
-// 	char	str1[10];
-// 	char	str2[10];
-
-// 	printf("%s\n", ft_strncpy(str1, "Hello", 10));
-// 	ft_strncpy(str2, "World", 10);
-// 	printf("%s\n", str1);
-// 	printf("%s\n", str2);
+// 	printf("%d\n", ft_str_is_lowercase("hello"));
+// 	printf("%d\n", ft_str_is_lowercase("Helloworld"));
+// 	printf("%d\n", ft_str_is_lowercase("Hello World !"));
+// 	printf("%d\n", ft_str_is_lowercase(""));
 // 	return (0);
 // }
