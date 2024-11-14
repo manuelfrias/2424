@@ -10,9 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+
+// Create a function that displays a string of characters onscreen. If this string contains characters that aren’t printable, they’ll have to be displayed in the shape of hexadecimals (lowercase), preceeded by a "backslash"
+
 #include <stdio.h>
 
-int	ft_str_is_printable(char *str)
+void ft_putstr_non_printable(char *str)
 {
 	int	i;
 
@@ -21,22 +24,14 @@ int	ft_str_is_printable(char *str)
 	{
 		if (str[i] <= 126 && str[i] >= 32)
 		{
+			str[i] = str[i];
 			i++;
 		}
 		else
 		{
-			return (0);
+			printf("\\x%x", str[i]);
+			
 		}
 	}
 	return (1);
 }
-
-// int	main(void)
-// {
-// 	printf("%d\n", ft_str_is_printable("hello"));
-// 	printf("%d\n", ft_str_is_printable("He!!loworld"));
-// 	printf("%d\n", ft_str_is_printable("HOLA""AAA"));
-// 	printf("%d\n", ft_str_is_printable("Hello \n World !"));
-// 	printf("%d\n", ft_str_is_printable(""));
-// 	return (0);
-// }
