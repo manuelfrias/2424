@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <stdio.h>
 
 int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (i < size - 1 && src[i] != '\0')
@@ -32,7 +32,7 @@ int	ft_strlcpy(char *dest, char *src, unsigned int size)
 // 	char str3[100];
 // 	int i;
 
-// 	i = ft_strlcpy(str1, "Hela", 2);
+// 	i = ft_strlcpy(str1, "Hola", 2);
 // 	printf("%i\n", i);
 // 	printf("%s\n", str1);
 // 	i = ft_strlcpy(str2, "Hello World", 100);

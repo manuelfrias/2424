@@ -6,7 +6,7 @@
 /*   By: manufria <manufria@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:48:40 by manufria          #+#    #+#             */
-/*   Updated: 2024/11/12 16:48:43 by manufria         ###   ########.fr       */
+/*   Updated: 2024/11/14 15:24:07 by manufria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	endofstr;
-	int	i;
+	int				endofstr;
+	unsigned int	i;
 
 	endofstr = 0;
 	i = 0;
