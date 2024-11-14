@@ -12,29 +12,30 @@
 
 #include <stdio.h>
 
-char *ft_strcapitalize(char *str)
+char	*ft_strcapitalize(char *str)
 {
-    int i;
-    i = 0;
-    while (str[i] != '\0')
-    {
-        if (i == 0 && str[i] <= 'z' && str[i] >= 'a')
-        {
-            str[i] = str[i] - 32;
-        }
+	int	i;
 
-        if (i > 0 && (str[i - 1] >= 32 && str[i - 1] <= 47) && str[i] <= 'z' && str[i] >= 'a')
-        {
-            str[i] = str[i] - 32;
-        }
-        i++;
-    }
-    return (str);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (i == 0 && str[i] <= 'z' && str[i] >= 'a')
+		{
+			str[i] = str[i] - 32;
+		}
+		if (i > 0 && (str[i - 1] >= 32 && str[i - 1] <= 47)
+			&& str[i] <= 'z' && str[i] >= 'a')
+		{
+			str[i] = str[i] - 32;
+		}
+		i++;
+	}
+	return (str);
 }
 
-int main(void)
-{
-    char str[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
-    printf("%s\n", ft_strcapitalize(str));
-    return (0);
-}
+// int main(void)
+// {
+//     char str[] = "salut, comment tu vas ? 42mots cinquante+et+un";
+//     printf("%s\n", ft_strcapitalize(str));
+//     return (0);
+// }
