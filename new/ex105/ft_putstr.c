@@ -2,6 +2,17 @@
 
 void ft_putstr(char *str)
 {
+    int i;
+    i = 0;
+    while (str[i] != '\0')
+    {
+        write(1, &str[i], 1);
+        i++;
+    }
+}
+
+void ft_putstr2(char *str)
+{
     while (*str != '\0')
     {
         write(1, str, 1);
@@ -11,7 +22,8 @@ void ft_putstr(char *str)
 
 int main(void)
 {
-    char str[] = "Hola";
+    char str[] = "Hosla";
     ft_putstr(str);
+    ft_putstr2(str);
     return (0);
 }
