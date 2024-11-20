@@ -1,35 +1,35 @@
 #include <stdio.h>
+
+int helper(char *str)
+{
+	int result;
+
+	result = 0;
+	while (*str >= '0' && *str <= '9')
+	{
+		result = result * 10 + (*str - '0');
+		str++;
+	}
+	return (result);
+}
+
 int ft_atoi(char *str)
 {
 	int sign;
-	int start_counting;
-	int result;
 
 	sign = 1;
-	start_counting = -1;
-	result = 0;
 	while (*str != '\0')
 	{
-		if (start_counting == -1)
+		if (*str == '-')
 		{
-			if (*str == '-')
-				sign = -1 * sign;
-			else if (*str >= '0' && *str <= '9')
-			{
-				start_counting = 1;
-				result = *str - '0';
-			}
+			sign = -1 * sign;
+			str++;
 		}
+		else if (*str >= '0' && *str <= '9')
+			return helper(str) * sign;
 		else
-		{
-			if (*str >= '0' && *str <= '9')
-				result = result * 10 + (*str - '0');
-			else
-				return result * sign;
-		}
-		str++;
+			str++;
 	}
-	return result * sign;
 }
 
 int main(void)
