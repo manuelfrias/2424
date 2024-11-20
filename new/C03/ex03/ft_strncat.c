@@ -1,8 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: manufria <manufria@student.42madrid.c      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/20 14:37:34 by manufria          #+#    #+#             */
+/*   Updated: 2024/11/20 14:37:36 by manufria         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // #include <stdio.h>
 
-char *ft_strncat(char *dest, char *src, unsigned int nb)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	char *ptr = dest;
+	char	*ptr;
+
+	ptr = dest;
 	while (*ptr != '\0')
 	{
 		ptr++;
@@ -15,7 +29,7 @@ char *ft_strncat(char *dest, char *src, unsigned int nb)
 		nb--;
 	}
 	*ptr = '\0';
-	return dest;
+	return (dest);
 }
 
 // int main(void)

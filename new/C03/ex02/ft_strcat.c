@@ -1,9 +1,21 @@
-// #include <stdio.h>
-char *ft_strcat(char *dest, char *src)
-{
-	char *ptr;
-	ptr = dest;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: manufria <manufria@student.42madrid.c      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/20 14:37:16 by manufria          #+#    #+#             */
+/*   Updated: 2024/11/20 14:37:17 by manufria         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+// #include <stdio.h>
+char	*ft_strcat(char *dest, char *src)
+{
+	char	*ptr;
+
+	ptr = dest;
 	while (*ptr != '\0')
 	{
 		ptr++;
@@ -15,7 +27,7 @@ char *ft_strcat(char *dest, char *src)
 		src++;
 	}
 	*ptr = '\0';
-	return dest;
+	return (dest);
 }
 
 // int main(void)
