@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int helper(char *str)
 {
 	int result;
