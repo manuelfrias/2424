@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <unistd.h>
+#include <unistd.h>
+
 void	ft_putstr(char *str)
 {
 	while (*str != '\0')
